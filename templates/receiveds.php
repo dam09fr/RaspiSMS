@@ -31,7 +31,12 @@
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title"><i class="fa fa-download  fa-fw"></i> Liste des SMS reçus</h3>
+							<h3 class="panel-title">
+								<i class="fa fa-download fa-fw"></i> Liste des SMS reçus
+								<div class="pull-right">
+									<a class="btn btn-default btn-xs" href="<?php echo $this->generateUrl('receiveds', ($page != 0 ? 'showAll' : ''), ($page != 0 ? array('page' => $page) : array())); ?>"><i class="fa fa-refresh fa-fw"></i> Actualiser</a>
+								</div>
+							</h3>
 						</div>
 						<div class="panel-body">
 							<div class="table-receiveds">
