@@ -31,8 +31,22 @@
 					<li <?php echo $page == 'dashboard' ? 'class="active"' : ''; ?>>
 						<a href="<?php echo $this->generateUrl('dashboard'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 					</li>
-					<li <?php echo $page == 'scheduleds' ? 'class="active"' : ''; ?>>
-						<a href="<?php echo $this->generateUrl('scheduleds'); ?>"><i class="fa fa-fw fa-envelope"></i> SMS</a>
+					<li <?php echo $page == 'addScheduleds' ? 'class="active"' : ''; ?>>
+						<a href="<?php echo $this->generateUrl('scheduleds', 'add'); ?>"><i class="fa fa-fw fa-plus"></i> Nouveau SMS</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-toggle="collapse" data-target="#sms"><i class="fa fa-fw fa-file-text"></i> SMS <i class="fa fa-fw fa-caret-down"></i></a>
+						<ul id="sms" class="collapse">
+							<li <?php echo $page == 'receiveds' ? 'class="active"' : ''; ?>>
+								<a href="<?php echo $this->generateUrl('receiveds'); ?>"><i class="fa fa-fw fa-download"></i> SMS reçus</a>
+							</li>
+							<li <?php echo $page == 'scheduleds' ? 'class="active"' : ''; ?>>
+								<a href="<?php echo $this->generateUrl('scheduleds'); ?>"><i class="fa fa-fw fa-calendar"></i> SMS Planifiés</a>
+							</li>
+							<li <?php echo $page == 'sendeds' ? 'class="active"' : ''; ?>>
+								<a href="<?php echo $this->generateUrl('sendeds'); ?>"><i class="fa fa-fw fa-send"></i> SMS envoyés</a>
+							</li>
+						</ul>
 					</li>
 					<li <?php echo $page == 'commands' ? 'class="active"' : ''; ?>>
 						<a href="<?php echo $this->generateUrl('commands'); ?>"><i class="fa fa-fw fa-terminal"></i> Commandes</a>
@@ -48,22 +62,11 @@
 							</li>
 						</ul>
 					</li>
-					<li>
-						<a href="javascript:;" data-toggle="collapse" data-target="#logs"><i class="fa fa-fw fa-file-text"></i> Logs <i class="fa fa-fw fa-caret-down"></i></a>
-						<ul id="logs" class="collapse">
-							<li <?php echo $page == 'sendeds' ? 'class="active"' : ''; ?>>
-								<a href="<?php echo $this->generateUrl('sendeds'); ?>"><i class="fa fa-fw fa-send"></i> SMS envoyés</a>
-							</li>
-							<li <?php echo $page == 'receiveds' ? 'class="active"' : ''; ?>>
-								<a href="<?php echo $this->generateUrl('receiveds'); ?>"><i class="fa fa-fw fa-download"></i> SMS reçus</a>
-							</li>
-							<li <?php echo $page == 'events' ? 'class="active"' : ''; ?>>
-								<a href="<?php echo $this->generateUrl('events'); ?>"><i class="fa fa-fw fa-clock-o"></i> Évènements</a>
-							</li>
-						</ul>
-					</li>
 					<li <?php echo $page == 'users' ? 'class="active"' : ''; ?>>
 						<a href="<?php echo $this->generateUrl('users'); ?>"><i class="fa fa-fw fa-user"></i> Utilisateurs</a>
+					</li>
+					<li <?php echo $page == 'events' ? 'class="active"' : ''; ?>>
+						<a href="<?php echo $this->generateUrl('events'); ?>"><i class="fa fa-fw fa-clock-o"></i> Évènements</a>
 					</li>
 				</ul>
 			</div>

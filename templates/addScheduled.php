@@ -5,7 +5,7 @@
 ?>
 <div id="wrapper">
 <?php
-	$incs->nav('scheduleds');
+	$incs->nav('addScheduleds');
 ?>
 	<div id="page-wrapper">
 		<div class="container-fluid">
