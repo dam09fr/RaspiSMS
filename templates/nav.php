@@ -20,7 +20,7 @@
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="<?php echo $this->generateUrl('connect', 'logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+							<a href="<?php echo $this->generateUrl('connect', 'logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Déconnexion</a>
 						</li>
 					</ul>
 				</li>
@@ -36,7 +36,7 @@
 					</li>
 					<li>
 						<a href="javascript:;" data-toggle="collapse" data-target="#sms"><i class="fa fa-fw fa-file-text"></i> SMS <i class="fa fa-fw fa-caret-down"></i></a>
-						<ul id="sms" class="collapse">
+						<ul id="sms" class="collapse <?php echo in_array($page, array('receiveds', 'scheduleds', 'sendeds')) ? 'in' : ''; ?>">
 							<li <?php echo $page == 'receiveds' ? 'class="active"' : ''; ?>>
 								<a href="<?php echo $this->generateUrl('receiveds'); ?>"><i class="fa fa-fw fa-download"></i> SMS reçus</a>
 							</li>
@@ -53,7 +53,7 @@
 					</li>
 					<li>
 						<a href="javascript:;" data-toggle="collapse" data-target="#repertoire"><i class="fa fa-fw fa-book"></i> Répertoire <i class="fa fa-fw fa-caret-down"></i></a>
-						<ul id="repertoire" class="collapse">
+						<ul id="repertoire" class="collapse <?php echo in_array($page, array('contacts', 'groups')) ? 'in' : ''; ?>">
 							<li <?php echo $page == 'contacts' ? 'class="active"' : ''; ?>>
 								<a href="<?php echo $this->generateUrl('contacts'); ?>"><i class="fa fa-fw fa-user"></i> Contacts</a>
 							</li>
